@@ -1,0 +1,43 @@
+h4 {
+  margin: 0;
+  padding: 15px 0
+}
+
+.panel-desc {
+  display: none;
+  cursor: default;
+  color: #000;
+}
+
+.panel-main ol li {
+  font-size: 14px;
+  border-bottom: solid 1px #000;
+  transition: 0.5s all linear;
+  -webkit-transition: 0.5s all linear;
+  position: relative;
+  cursor: pointer;
+  backface-visibility: hidden;
+  list-style-type: none
+}
+
+.panel-main ol li::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 19px;
+  font-size: 31px;
+  transition: 0.5s all linear;
+  -webkit-transition: 0.5s all linear;
+  height: 18px;
+  width: 18px;
+  line-height: 13px;
+  backface-visibility: hidden;
+}
+
+.panel-main ol li.open::after {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transition: 0.5s all linear;
+  -webkit-transition: 0.5s all linear;
+  backface-visibility: hidden;
+}
